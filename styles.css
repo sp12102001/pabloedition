@@ -1,31 +1,35 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
+/* Add section styling for consistent spacing and border */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
 }
-.hero-image {
-    background-image: url('assets/hero-image.webp');
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-.content {
-    padding: 16px;
-}
+
+/* Utilize CSS grid to create a responsive layout for video thumbnails */
 .grid {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
-    grid-template-columns: auto auto;
 }
-.card {
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    text-align: center;
+
+/* Style the video thumbnail container */
+.video-thumb {
+    background-color: #f0f0f0;
+    padding: 10px;
+    height: 150px; /* Example height, adjust as needed */
 }
-.footer {
-    padding: 20px;
-    text-align: center;
+
+/* Enhance the appearance of the Patreon and social links */
+a.button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out;
+}
+
+a.button:hover {
+    background-color: #0056b3;
 }
