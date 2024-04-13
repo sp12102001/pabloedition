@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pablo Edition - A Football Channel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .hero-image {
+            background-image: url('https://files.oaiusercontent.com/file-NYJwjLvjvDKxJuzQqsA9sjMA?se=2024-04-13T09%3A27%3A03Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D07cac0f5-0d60-4304-8268-b3298d1412ab.webp&sig=PzykgpgQfU%2Bquyc2GCLSxhGi%2Bf8BszCaaB54R5K7sXI%3D');
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .content {
+            padding: 16px;
+        }
+        .grid {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: auto auto;
+        }
+        .card {
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .footer {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Pablo Edition - A Football Channel</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#player-profiles">Player Profiles</a></li>
+            <li><a href="#match-analysis">Match Analysis</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#editorials">Editorials</a></li>
+        </ul>
+    </nav>
+    <div class="hero-image"></div>
+    <main class="container">
+        <div class="grid">
+            <section id="player-profiles">
+                <h2>Player Profiles</h2>
+                <img src="https://files.oaiusercontent.com/file-2sncODQVqLTnAtdGEFdci92M?se=2024-04-13T09%3A27%3A03Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db61ec006-81f1-44ef-add5-dcaa444e380c.webp&sig=t96yiXQuSDppEXZHFhR1FuCTwdeO2GCkKM%2B3K9C/3Bg%3D" alt="Dynamic Football Player">
+                <p>Detailed insights into the careers and skills of top football players.</p>
+            </section>
+            <section id="match-analysis">
+                <h2>Match Analysis</h2>
+                <img src="https://files.oaiusercontent.com/file-Mkdawf5vUsvxjlYXjlKPorHS?se=2024-04-13T09%3A27%3A03Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dc7007d3f-0993-4cc6-99b1-9512cf7f8894.webp&sig=OlLpx/9Du8vkVgpKa6RNYRiuKY0snxoa0iLyR/zy3fs%3D" alt="Tactical Board">
+                <p>Deep dive into the tactics and strategies of recent matches.</p>
+            </section>
+            <section id="highlights">
+                <h2>Highlight Reels</h2>
+                <img src="https://files.oaiusercontent.com/file-tf5Iu9QVeUj3BP8V5teeMFFm?se=2024-04-13T09%3A27%3A03Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Da037683d-16a1-42e9-b53b-708c2b98ecc2.webp&sig=DGdWZ2VBuF0M1HHReg3ytypyUnAu/JwiUaOmQhaoON4%3D" alt="Link-up Play">
+                <p>Exciting compilations of the most skillful plays and goals.</p>
+            </section>
+            <section id="editorials">
+                <h2>Editorials</h2>
+                <img src="https://files.oaiusercontent.com/file-JcVjd4GXf5tv31ALdkyzMQuc?se=2024-04-13T09%3A27%3A03Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D106b6ead-1587-4dfe-a6ad-49f11214fade.webp&sig=b7Ddf/R4VZdk7mp1VQFZm5wP0xvl2M12AUC9WFxUOlA%3D" alt="Contemplative Player">
+                <p>In-depth analysis and opinions on the latest developments in football.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <small>Follow us on <a href="#">Twitter</a> • <a href="#">Instagram</a></small>
+    </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Search functionality
+    function searchContent() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toUpperCase();
+        const sections = document.querySelectorAll('main > .grid > section');
+        sections.forEach(section => {
+            const text = section.textContent || section.innerText;
+            if (text.toUpperCase().indexOf(filter) > -1) {
+                section.style.display = "";
+            } else {
+                section.style.display = "none";
+            }
+        });
+    }
+    document.getElementById('searchInput').addEventListener('keyup', searchContent);
+
+    // Subscription form submission handling
+    document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('email');
+        alert('Thank you for subscribing, ' + emailInput.value + '!');
+        emailInput.value = ''; // Clear the input after submitting
+    });
+});
+
+// Placeholder for additional functionality as needed
+    </script>
+</body>
+</html>
