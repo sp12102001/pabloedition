@@ -125,74 +125,49 @@ p {
 }
 
 .contact-section {
-margin-bottom: 60px;
-opacity: 0;
-animation: textFadeIn 1s ease-in-out 1.6s forwards;
 text-align: center;
+margin-bottom: 60px;
 }
 .contact-section h2 {
-font-family: 'Montserrat', sans-serif;
 font-size: 36px;
 font-weight: 700;
-color: #FFFFFF;
 margin-bottom: 20px;
-text-transform: uppercase;
-letter-spacing: 1px;
 }
 .contact-section p {
 font-size: 18px;
-margin-bottom: 30px;
-line-height: 1.5;
-max-width: 600px;
-margin-left: auto;
-margin-right: auto;
+margin-bottom: 40px;
 }
-.contact-form {
+.contact-buttons {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-.contact-form input,
-.contact-form textarea {
+.contact-btn {
+display: inline-block;
+padding: 20px 40px;
+margin-bottom: 20px;
+font-size: 20px;
+font-weight: 700;
+text-decoration: none;
+border-radius: 50px;
+transition: background-color 0.3s, transform 0.3s;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 width: 100%;
 max-width: 400px;
-padding: 15px;
-border-radius: 5px;
-border: none;
-background-color: rgba(255, 255, 255, 0.2);
-font-size: 16px;
-color: #FFFFFF;
-margin-bottom: 20px;
-transition: background-color 0.3s;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.contact-form input:focus,
-.contact-form textarea:focus {
-background-color: rgba(255, 255, 255, 0.3);
-outline: none;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+.contact-btn i {
+margin-right: 10px;
 }
-.contact-form textarea {
-resize: vertical;
-min-height: 120px;
-}
-.contact-form button {
-padding: 15px 30px;
+.email-btn {
 background-color: #FFD700;
-border-radius: 30px;
 color: #000000;
-border: none;
-cursor: pointer;
-font-size: 18px;
-font-weight: 700;
-transition: background-color 0.3s, transform 0.3s;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-text-transform: uppercase;
-letter-spacing: 1px;
 }
-.contact-form button:hover {
+.form-btn {
 background-color: #FFFFFF;
-transform: scale(1.03);
+color: #000000;
+}
+.contact-btn:hover {
+transform: scale(1.05);
 }
 @keyframes fadeIn {
     0% {
@@ -260,5 +235,4 @@ transform: scale(1.03);
             <a href="https://twitter.com/pabloedition" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
             <a href="mailto:contact@pabloedition.com" target="_blank" class="email"><i class="fas fa-envelope"></i></a>
         </div>
-<a href="javascript:void(window.open('https://form.jotform.com/241165072108347', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500'))" class="subscribe-btn">Contact Me</a>
-<div class="contact-section"> <h2>Contact Me</h2> <p>For business inquiries or collaborations, please use one of the methods below to get in touch with me.</p> <a href="mailto:contact@pabloedition.com" class="subscribe-btn">Email Me</a> <a href="javascript:void(window.open('https://form.jotform.com/241165072108347', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500'))" class="subscribe-btn">Contact Form</a> </div> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241165072108347']", "https://form.jotform.com/")</script> </div> <script> // Additional scripts if needed </script> </body> </html>
+<div class="contact-section"> <h2>Contact Me</h2> <p> For collaboration or inquiries, you can reach me through email, or via linked form: </p> <div class="contact-buttons"> <a href="mailto:contact@pabloedition.com" class="contact-btn email-btn"> <i class="fas fa-envelope"></i> Email Me </a> <a href="javascript:void(window.open('https://form.jotform.com/241165072108347', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500'))" class="contact-btn form-btn"> <i class="fas fa-file-alt"></i> Contact Form </a> </div> </div> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241165072108347']", "https://form.jotform.com/")</script> </div> <script> // Additional scripts if needed </script> </body> </html> 
